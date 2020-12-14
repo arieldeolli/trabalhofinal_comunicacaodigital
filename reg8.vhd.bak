@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+ENTITY reg8 IS
+	PORT ( i_DATA : IN STD_LOGIC_VECTOR(7 DOWNTO 0) ;
+		Resetn, Clock: IN STD_LOGIC ;
+		o_DATA : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) ) ;
+END reg8 ;
+
+ARCHITECTURE arch_reg8 OF reg8 IS
+BEGIN
+	PROCESS ( Resetn, Clock )
+	BEGIN
+		IF Resetn = '0' THEN
+		Q <= "00000000" ;
+		ELSIF Clock'EVENT AND Clock = '1' THEN Q <= D ;
+		END IF ;
+	END PROCESS ;
+END arch_reg8 ;

@@ -1,0 +1,27 @@
+-- Trabalho de Comunicação Digital
+-- Alunos: Ariel, Carlos e Eric
+-- Professor: Felipe Viel
+
+-- Bibliotecas utilizadas
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity spi is port
+(
+
+	i_SCLK  : in std_logic; -- clock do spi
+	i_DATA  : in std_logic_vector (7 downto 0); -- entrada de dados
+	i_TVALID : in  std_logic; -- TVALID 
+	o_TREADY : out  std_logic; -- TREADY
+	o_TDATA  : out std_logic_vector (7 downto 0); -- saída
+	o_SS : out std_logic -- saida !SS
+
+);
+end spi;
+
+architecture arch_spi of spi is
+
+begin
+   
+
+end arch_spi;
